@@ -1,0 +1,29 @@
+{
+  "name": "npm-fun",
+  "dependencies": {
+    "dat": "^6.9.4",
+    "duplexer2": "0.0.2",
+    "gasket": "^1.4.0",
+    "jsonfilter": "^1.1.2",
+    "jsonmap": "^1.3.0",
+    "ldjson-stream": "^1.2.1",
+    "through2": "^0.6.3"
+  },
+  "gasket": {
+    "deps-size-all": [
+      "jsonmap --file=./script/size-deps.js",
+      "jsonfilter versions.*"
+    ],
+    "deps-size-latest": [
+      "gasket run deps-size-all",
+      "jsonfilter --match='this.latest'"
+    ],
+    "dep-tree": [
+      "gasket run deps-size-latest",
+      {
+        "module": "./script/dep-tree.js",
+        "json": true
+      }
+    ]
+  }
+}
