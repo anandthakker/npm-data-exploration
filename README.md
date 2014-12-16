@@ -76,7 +76,7 @@ pip install -r requirements.txt
 and then run the notebook server:
 
 ```bash
-ipython notebook
+ipython notebook --pylab inline
 ```
 
 And browse to [explore.ipynb][3].
