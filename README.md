@@ -54,8 +54,10 @@ To run all the gaskets in this package and output their results to the `data/`
 directory (where the iPython notebook below will be expecting them), just do:
 
 ```bash
-./run-pipes.sh
+./run-pipes.sh --limit=1000
 ```
+
+(omit the `--limit` if you've got a little time on your hands)
 
 
 # python is for exploring and analyzing it.
